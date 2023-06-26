@@ -1,59 +1,75 @@
-body {
-  background: papayawhip;
-  margin: 0;
-  font-size: 5em;
+* {
+  outline: 1px solid greenyellow;
+  color: white;
+  text-align: center;
 }
-.container{
+.container {
+  background: orange;
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin: 10px;
+  flex-direction: column;
+  margin: 0px;
+  gap: 15px;
 }
- .container div{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  background-color:blue;
-  border-radius: 10px;
-  height: 200px;
-  width: 30vw;
- }
- .container .a, .container .b{
-   
-   width: 100%;
- }
- .container .b{
-   height: 50vh;
-   
- }
- .container .c{
+.bcd {
+  display: flex;
+  flex-direction: row;
   flex-grow: 1;
- }
- .container .d{
+  min-height: 20vh;
+}
+.efg {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  min-height: 20vh;
+}
+.bcd div {
   flex-grow: 1;
 }
-.container .e{
+.efg div {
   flex-grow: 1;
 }
-.container .f{
+.a {
+  max-height: 20vh;
   flex-grow: 1;
+  min-width: 20vh;
+  gap: 15px;
+  
 }
-@media (min-width:600px){
-  body{
-    background-color: gray;
+
+.h {
+  flex-grow: 2;
+  min-height: 50vh;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  * {
+    color: greenyellow;
+    background-color: orange;
   }
-  .container .b{
-    height: 50vh;
-    width: 80vw;
-    order: 1;
+  .container {
+    background: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
   }
-  .container .f{
-    width: auto;
-    order: 1 ;
-    height: 50vh;
-    
+  .a {
+    width: 100%;
+    min-height: 60vh;
   }
- .container .c, .container .d,  .container .e{
-   order: 2;
+  .group {
+    width: 60vh;
+    flex-grow: 2CSS-R;
+  }
+  .bcd {
+    min-height: 40vh;
+  }
+  .efg {
+    min-height: 40vh;
+  }
+  .h {
+    min-height: 60vh;
+    flex-direction: column;
+    width: 60vh;
+    flex-grow: 3;
   }
 }
